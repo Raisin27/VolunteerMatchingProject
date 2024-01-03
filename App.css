@@ -1,0 +1,328 @@
+.App {
+  text-align: center;
+  font-family:'Nanum Gothic',dotum,'돋움',sans-serif;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.previous{
+  width:100%;
+  margin:0;
+  opacity: 0.6;
+  z-index: 0;
+}
+.modes{
+  z-index: 1;
+  position: absolute; 
+  top: 50%;
+  width: 100%;
+
+}
+.modes >:link{
+  width: 300px;
+  height:150px;
+  border-radius: 20px;
+  margin: 10px;
+  line-height: 120px;
+  font-size: 2.5rem;
+}
+.map_wrap, .map_wrap * {
+  margin:0;
+  padding:0;
+
+  font-size:12px;
+}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{
+  color:#000;
+  text-decoration: none;
+}
+.map_wrap {
+  position:relative;
+  width:100%;
+  height:600px;
+}
+#menubtn{
+  position:absolute;
+  top:0;
+  left:0;
+  margin: 10px;
+  /* bottom:0; */
+  /* width:350px; */
+  /* margin:10px 0 30px 10px; */
+  padding:5px;
+  /* overflow-y:auto; */
+  /* background:rgba(255, 255, 255, 0.7); */
+  width: 60px;
+  height: 45px;
+  z-index: 9999;
+  font-size:16px;
+  border-radius: 10px;
+  font-family: "Malgun-Gothic";
+}
+#menu_wrap {
+  position:absolute;
+  /* top:50px; */
+  top:0;
+  left:0;
+  bottom:0;
+  width:350px;
+  margin:10px 0 30px 10px;
+  padding:5px;
+  overflow-y:auto;
+  background:rgba(255, 255, 255, 1);
+  z-index: 9999;
+  font-size:12px;
+  border-radius: 10px;
+}
+.bg_white {
+  background:#fff;
+}
+#menu_wrap hr {
+  display: block;
+   height: 1px;
+   border: 0; 
+   border-top: 2px solid #5F5F5F;
+   margin:3px 0;
+}
+#menu_wrap .option{text-align: center;}
+#menu_wrap .option p {margin:10px 0;}  
+#menu_wrap .option button {margin-left:5px;}
+
+#placesList .item {
+  position:relative;
+  border-bottom:1px solid #888;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 65px;
+}
+#placesList .item span {
+  display: block;
+  margin-top:4px;
+}
+#placesList .item h5, #placesList .item .info {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#placesList .item .info{padding:10px 0 10px 55px;}
+#pagination {
+  margin:10px auto;
+  text-align: center;
+}
+#pagination a {
+  display:inline-block;
+  margin-right:10px;
+}
+#pagination .on {
+  font-weight: bold;
+   cursor: default;
+   color:#777;
+}
+.p-img{
+  height: 80vh;
+  width: 100vw;
+  object-fit: cover;
+}
+.postmodal{
+  background : rgba(0,0,0,0.25);
+  position : fixed;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+}
+.titles{
+  margin: 40px 0 25px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.s-img{
+  object-fit: cover;
+}
+.align{
+  text-align: center;
+}
+.signupbtn{
+  margin: 0 20px 20px 20px;
+  float: right;
+}
+.link-btn{
+	cursor: pointer;
+  position: absolute;
+	top:0;
+	right:20px;
+	z-index: 9999;
+	padding: 0;
+}
+.listbtn{
+  position:absolute;
+  overflow:hidden;
+  top:80px;
+  left:420px;
+  width:150px;
+  height:50px;
+  z-index:10;
+  border:1px solid black;
+  font-family:'Malgun Gothic','맑은 고딕',sans-serif;
+  font-size:12px;
+  text-align:center;
+  background-color:#fff;
+}
+.postmodal{
+  background : rgba(0,0,0,0.25);
+  position : fixed;
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+}
+.text_white{
+  color: white;
+  font-weight: bold;
+}
+.status-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+}
+
+.status-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 300px; */
+}
+.status-title{
+  margin-top: 100px;
+  font-weight: bold;
+}
+
+.status-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* background-color: #3498db; 기본 색상 설정 */
+  background-image: url("/public/images/pic1.jpg");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  /* background-blend-mode: overlay; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: white;
+  box-shadow: inset 0 0 0 2000px rgba(193, 241, 222, 0.195);
+}
+
+/* 추가 상태에 따른 색상 및 스타일 조정 */
+.status-circle.warning {
+  /* background-color: #e74c3c; */
+  background-image: url("/public/images/pic2.jpg");
+
+}
+
+.status-circle.success {
+  /* background-color: #2ecc71; */
+  background-image: url("/public/images/pic3.jpg");
+
+}
+
+.status-circle span {
+  font-weight: bold;
+}
+.status-header{
+  font-size: 1rem;
+}
+.status{
+  font-size: 3rem;
+  font-family: "Noto Sans";
+}
+.information-header{
+  margin: 30px;
+}
+.infor-btn{
+  margin-bottom: 20px;
+  width: 75px;
+  height: 75px;
+  background-image: url("/public/images/seoul.jpg");
+  background-size: 75px;
+  background-repeat:  no-repeat;
+   /* scroll 0 0 transparent; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  padding-bottom: 2px;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  box-shadow: inset 0 0 0 2000px rgba(10, 10, 10, 0.486);
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Noto Sans";
+}
+.infor-btn:hover{
+  font-size: 1.1rem;
+  box-shadow: inset 0 0 0 2000px rgba(30, 41, 41, 0.127);
+}
+/* .infor-btn:active{
+  font-size: 1.1rem;
+  box-shadow: inset 0 0 0 2000px rgba(30, 41, 41, 0);
+} */
+.infor-btn:visited{
+  font-size: 1.25rem;
+  color: white;
+  box-shadow: inset 0 0 0 2000px rgba(247, 248, 248, 0.127);
+  width: 80px;
+  height: 80px;
+}
+.infor-btn.btn2{
+  background-image: url("/public/images/busan.jpg");
+}
+.infor-btn.btn3{
+  background-image: url("/public/images/daegu.jpg");
+}
+.infor-btn.btn4{
+  background-image: url("/public/images/gyeonggi.jpg");
+}
+.infor-btn.btn5{
+  background-image: url("/public/images/jeju.jpg");
+}
+.addvol-btn{
+  margin:0 20px;
+}
+.link{
+  text-decoration: none;
+}
